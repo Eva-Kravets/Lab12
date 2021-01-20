@@ -1,0 +1,100 @@
+﻿* {
+    font-family: 'Caveat', cursive;
+}
+body {
+    text-align: center;
+    background-color: #f3e4c9;
+    padding-bottom: 50px;
+}
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.header__title {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.lorem {
+    text-align: left;
+    margin: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 25px;
+}
+
+.fon {
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 0px;
+    background-color: white;
+    width: 350px;
+    height: 230px;
+    border-radius: 10px;
+}
+
+.form__input1 {
+    font-size: 20px;
+    text-align: left;
+    width: 400px;
+}
+
+.form__input { 
+    padding-left: 15px;
+    text-align: left;
+    width: 300px;
+    height: 25px;
+    border: 2px solid wheat;
+    outline: none;
+    cursor: pointer;
+    background-color: #fffaf0;
+    border-radius: 6px;
+}  
+ 
+.form_count {
+    text-align: left;
+}
+
+.form__submit {
+    font-size: 20px;
+    margin: 30px;
+    width: 200px;
+    height: 35px;
+    border: 1px solid #d3b06f;
+    outline: none;
+    cursor: pointer;
+    background-color: #d3b06f;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+    .form__submit:hover {
+        background-color:#a58343;
+        color: white;
+    }
+
+
+
+.list {
+    margin-top: 20px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 0px;
+    background-color: white;
+    width: 350px;
+    border-radius: 10px;
+    height: 100%;
+    background-color: white;
+}
+
+.list__item {
+    margin-bottom: 7px;
+}
+
+.form__empty {
+    margin-top: 20px;
+}

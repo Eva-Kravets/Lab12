@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <form id="app">
+
+        <h1 class="header__title">Список студентов</h1>
+        <p class="lorem">
+           Введите имя и фамилию студента для составления списка.
+        </p>
+
+        
+        <div class="form__input1">
+            <center><h2><b>Форма</b></h2></center>
+            <div class="fon">
+                <label class="form1"><b>Фамилия</b></label>
+                <p>
+                    <input v-on:input="validate()" v-model="surnameInput" type="text" class="form__input">
+                </p>
+
+                <label class="form1"><b>Имя</b></label>
+                <p>
+                    <input v-on:input="validate()" v-model="firstnameInput" type="text" class="form__input">
+                </p>
+
+                <div class="form__count">
+                    <p>
+                        <b>Количество знаков:</b>
+                        {{ surnameInput.length + firstnameInput.length }}
+                    </p>
+                </div>
+            </div>
+            <center>
+                <input :disabled="disabled" v-on:click="addStudents($event)" type="submit" value="Записать" class="form__submit">
+                <h2><b>Список</b></h2>
+            </center>
+
+            <ol class="list" v-if="students.length">
+                <li v-for="student in students"  :key="student.idLast"   class="list__item">
+                    {{ `${student.surname} ${student.firstname}` }}
+                </li>
+            </ol>
+
+            <span v-else class="form__empty">Список пуст</span>
+        </div>
+    </form>
+
+    <script src="vue.js"></script>
+</body>
+</html>
